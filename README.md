@@ -1,5 +1,5 @@
 # vdxrancid
-Automatically exported from code.google.com/p/vdxrancid, thanks to nick@buraglio.com
+forked from buraglio/vdxrancid, thanks to nick@buraglio.com
 
 This code doesn't seem to work on my VDX switches, despite it accurately pulling the running-config, and produces the following error:
 `loadtype: loading vdxrancid failed: vdxrancid.pm did not return a true value at /usr/share/perl5/vendor_perl/rancid/rancid.pm line 228.`
