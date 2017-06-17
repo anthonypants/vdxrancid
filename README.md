@@ -29,7 +29,9 @@ brocade-vdx;command;vdx::ShowConfig;show running-config
 ```
 
 Third, edit your 'router.db' file to include the 'brocade-vdx' type. It should look something like this, where '10.0.0.8' belongs to your VDX appliance:
-`10.0.0.8;brocade-vdx;up`
+```
+10.0.0.8;brocade-vdx;up
+```
 
 That should be it. To test, you can try the following as the rancid user:
 ```
