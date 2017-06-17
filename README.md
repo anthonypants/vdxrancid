@@ -12,8 +12,10 @@ So, I modified clogin and foundry.pm from the stock RANCID package (version 3.2,
 
 # How do I set up vdxrancid?
 First, download the files and move them into the RANCID folders. If you're using CentOS 7 like me, you can enter the following commands to install the scripts:
-`wget https://github.com/anthonypants/vdxrancid/raw/master/vdx.pm && sudo cp vdx.pm /usr/share/perl5/vendor_perl/rancid/vdx.pm && sudo chcon -R -u system_u /usr/share/perl5/vendor_perl/rancid/vdx.pm`
-`wget https://github.com/anthonypants/vdxrancid/raw/master/vdxlogin && sudo cp vdxlogin /usr/libexec/rancid/vdxlogin && sudo chcon -R -u system_u /usr/libexec/rancid/vdxlogin`
+```
+wget https://github.com/anthonypants/vdxrancid/raw/master/vdx.pm && sudo cp vdx.pm /usr/share/perl5/vendor_perl/rancid/vdx.pm && sudo chcon -R -u system_u /usr/share/perl5/vendor_perl/rancid/vdx.pm
+wget https://github.com/anthonypants/vdxrancid/raw/master/vdxlogin && sudo cp vdxlogin /usr/libexec/rancid/vdxlogin && sudo chcon -R -u system_u /usr/libexec/rancid/vdxlogin
+```
 
 Second, edit your `/etc/rancid/rancid.types.conf` file to point to these scripts. I have the following block in mine:
 ```
