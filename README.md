@@ -19,24 +19,24 @@ wget https://github.com/anthonypants/vdxrancid/raw/master/vdxlogin && sudo cp vd
 
 Second, edit your `/etc/rancid/rancid.types.conf` file to point to these scripts. I have the following block in mine:
 ```
-brocade-vdx;script;rancid -t vdx
-brocade-vdx;login;vdxlogin
-brocade-vdx;module;vdx
-brocade-vdx;inloop;vdx::inloop
-brocade-vdx;command;vdx::ShowVersion;show version
-brocade-vdx;command;vdx::ShowChassis;show chassis
-brocade-vdx;command;vdx::ShowConfig;show running-config
+vdx;script;rancid -t vdx
+vdx;login;vdxlogin
+vdx;module;vdx
+vdx;inloop;vdx::inloop
+vdx;command;vdx::ShowVersion;show version
+vdx;command;vdx::ShowChassis;show chassis
+vdx;command;vdx::ShowConfig;show running-config
 ```
 
 Third, edit your 'router.db' file to include the 'brocade-vdx' type. It should look something like this, where '10.0.0.8' belongs to your VDX appliance:
 ```
-10.0.0.8;brocade-vdx;up
+10.0.0.8;vdx;up
 ```
 
 That should be it. To test, you can try the following as the rancid user:
 ```
 $ export PATH=$PATH:/usr/libexec/rancid && export NOPIPE=YES
-$ rancid -d -t brocade-vdx 10.0.0.8 2>&1
+$ rancid -d -t vdx 10.0.0.8 2>&1
 ```
 
 
